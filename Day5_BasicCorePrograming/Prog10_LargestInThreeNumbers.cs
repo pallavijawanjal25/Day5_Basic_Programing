@@ -6,20 +6,27 @@ using System.Threading.Tasks;
 
 namespace Day5_BasicCorePrograming
 {
-    static class Prog10_LargestInThreeNumbers
+    public static class LargestAmongThree
     {
-        public static void LargestNumber()
+        public   static void CheckLargestNumber()
         {
-            Console.WriteLine("Enter three numbers:  ");
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
-            int c = Convert.ToInt32(Console.ReadLine());
+            int n1, n2, n3, largest;
+            Console.WriteLine("Enter the Number 1");
+            n1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the Number 2");
+            n2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the Number 3");
+            n3 = int.Parse(Console.ReadLine());
 
-       
-            int largest = (a > b) ? (a > c ? a : c) : (b > c ? b : c);
-
-            Console.WriteLine("Largest number is {0}", largest);
-
+            if (n1 > n2 && n1 > n3)
+                largest = n1;
+            else if (n2 > n1 && n2 > n3)
+                largest = n2;
+            else
+                largest = n3;
+Console.WriteLine("Largest number Among Three {0},{1},{2}is{3}",n1,n2,n3,largest);
+            Console.WriteLine();
         }
     }
 }
+
